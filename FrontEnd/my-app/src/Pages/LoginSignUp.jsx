@@ -17,7 +17,7 @@ const LoginSignUp = () => {
     const login = async () => {
         console.log("Login Function Exceuted", formDate);
         let responseData;
-        await fetch('https://gulam-shop-backend.onrender.com/login', {
+        await fetch('http://localhost:4000/login', {
             method: 'POST',
             headers: {
                 Accept: 'application/form-data',
@@ -37,7 +37,7 @@ const LoginSignUp = () => {
     const signup = async () => {
         console.log("Signup Function Exceuted", formDate);
         let responseData;
-        await fetch('https://gulam-shop-backend.onrender.com/signup', {
+        await fetch('http://localhost:4000/signup', {
             method: 'POST',
             headers: {
                 Accept: 'application/form-data',
