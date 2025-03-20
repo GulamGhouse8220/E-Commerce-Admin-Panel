@@ -30,7 +30,7 @@ const AddProduct = () => {
     let formData = new FormData();
     formData.append('product', image);
 
-    await fetch('https://gulam-shop-backend.onrender.com/upload', {
+    await fetch('http://localhost:4000/upload', {
       method: "POST",
       headers: {
         Accpect: 'application/json',
@@ -41,7 +41,7 @@ const AddProduct = () => {
     if (responseDate.success) {
       product.image = responseDate.image_url;
       console.log(product);
-      await fetch('https://gulam-shop-backend.onrender.com/addproduct',{
+      await fetch('http://localhost:4000/addproduct',{
         method:'POST',
         headers:{
           Accept:'application/json',
